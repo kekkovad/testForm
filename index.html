@@ -1,4 +1,4 @@
-<form name="modulo">
+<form name="modulo" method="post">
 Email:<br />
 <input type="text" name="email"> <br />
 Oggetto:<br />
@@ -30,3 +30,20 @@ Messaggio:<br />
     }
     }
 </script>
+
+<?php
+
+
+if($_POST["message"]) {
+
+
+mail("mahayam566@ubinert.com", document.modulo.oggetto.value,
+
+
+$_POST[document.modulo.messaggio.value]. "From: an@email.address");
+
+
+}
+
+
+?>
