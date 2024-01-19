@@ -1,7 +1,8 @@
 <script type="text/javascript">
     <!--
     function Email() {
-    var email = document.modulo.email.value;
+    //var email = document.modulo.email.value;
+	var email = "andreaborriello@hotmail.it";
     var oggetto = document.modulo.oggetto.value;
     var messaggio = document.modulo.messaggio.value;
     if ((email.indexOf("@") == (-1)) || (email == "") || (email == "undefined")) {
@@ -39,14 +40,14 @@
 		<!-- Header -->
 			<header id="header">
 				<h1>EMAIL FORM</h1>
-				<p>Un esemplice template per inviare email ad un indirizzo<br />
-				email statico. By kekkovad</a>.</p>
+				<p>Un esemplice template per inviare email ad Andrea B.<br />
+				By kekkovad</a>.</p>
 			</header>
 
 		<!-- Signup Form -->
 		<form name="modulo">
-			Email:<br />
-			<input type="text" name="email"> <br />
+			<!-- Email:<br />
+			<input type="text" name="email"> <br /> -->
 			Oggetto:<br />
 			<input type="text" name="oggetto"> <br />
 			Messaggio:<br />
