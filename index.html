@@ -8,7 +8,7 @@
 	var a = document.modulo.a.value;
 	var eta = document.modulo.eta.value;
     var messaggio = document.modulo.messaggio.value;
-	var fullmessage = `${utente}, ${eta} anni, richiede preventivo per noleggio da ${da} a ${a}.\n\nRichieste speciali:\n${messaggio}`
+	var fullmessage = `${utente}, ${eta} anni, richiede preventivo per noleggio da ${da} a ${a}. \n \n Richieste speciali: \n ${messaggio}`
     if ((da == "") || (da == "undefined") ||(a == "") || (a == "undefined") || (eta == "") || (eta == "undefined") || (utente == "") || (utente == "undefined")) {
 	alert("Valorizzare tutti i campi obbligatori.");
     
