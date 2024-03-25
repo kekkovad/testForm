@@ -9,7 +9,7 @@
 	var eta = document.modulo.eta.value;
     var messaggio = document.modulo.messaggio.value;
 	var fullmessage = `${utente}, ${eta} anni, richiede preventivo per noleggio da ${da} a ${a}.\n\nRichieste speciali:\n${messaggio}`
-    if ((da == "") || (da == "undefined")) {
+    if ((da == "") || (da == "undefined") ||(a == "") || (a == "undefined") || (eta == "") || (eta == "undefined") || (utente == "") || (utente == "undefined")) {
 	alert("Valorizzare tutti i campi obbligatori.");
 	document.modulo.utente.focus();
 	document.modulo.da.focus();
