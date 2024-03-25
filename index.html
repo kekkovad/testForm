@@ -1,24 +1,19 @@
 <script type="text/javascript">
-    <!--
+    
     function Email() {
-    //var email = document.modulo.email.value;
-	var email = "andreaborriello@hotmail.it";
-    var oggetto = document.modulo.oggetto.value;
+	var email = "sempionerealestate@gmail.com";
+	var utente = document.modulo.utente.value;
+	var oggetto = `Preventivo per ${utente}`;
+	var da = document.modulo.da.value;
+	var a = document.modulo.a.value;
+	var eta = document.modulo.a.value;
     var messaggio = document.modulo.messaggio.value;
-    if ((email.indexOf("@") == (-1)) || (email == "") || (email == "undefined")) {
-    alert("Inserire un indirizzo email valido.");
-    document.modulo.email.focus();
-    }
-    else if ((oggetto == "") || (oggetto == "undefined")) {
-    alert("Inserire un oggetto.");
-    document.modulo.oggetto.focus();
-    }
-    else if ((messaggio == "") || (messaggio == "undefined")) {
-    alert("Inserire un messaggio.");
-    document.modulo.messaggio.focus();
-    }
-    else {
-    location.href = "mailto:" + email + "?Subject=" + oggetto + "&Body=" + messaggio;
+	var fullmessage = `${utente}, ${eta} anni, richiede preventivo per noleggio da ${da} a ${a}.\n\nRichieste speciali:\n${messaggio}`
+    if ((da == "") || (da == "undefined")) {
+	alert("Valorizzare tutti i campi obbligatori.");
+    
+    } else {
+    location.href = "mailto:" + email + "?Subject=" + oggetto + "&Body=" + fullmessage;
     }
     }
 </script>
@@ -30,7 +25,7 @@
 -->
 <html>
 	<head>
-		<title>Your Title</title>
+		<title>Sempione Rent</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -39,8 +34,8 @@
 
 		<!-- Header -->
 			<header id="header">
-				<h1>EMAIL FORM</h1>
-				<p>Un esemplice template per inviare email ad Andrea B.<br />
+				<h1>SEMPIONE RENT</h1>
+				<p>Per il tuo preventivo compila i seguenti campi e invia l' e-mail<br />
 				By kekkovad</a>.</p>
 			</header>
 
@@ -48,9 +43,17 @@
 		<form name="modulo">
 			<!-- Email:<br />
 			<input type="text" name="email"> <br /> -->
-			Oggetto:<br />
-			<input type="text" name="oggetto"> <br />
-			Messaggio:<br />
+			<!-- Oggetto:<br />
+			<input type="text" name="oggetto"> <br />  -->
+			Cognome e Nome:<br />
+			<input required type="text" name="utente"> <br />
+			Età:<br />
+			<input required type="number" name="eta"> <br />
+			Noleggio Da:<br />
+			<input required type="date" name="da"> <br />
+			A:<br />
+			<input required type="date" name="a"> <br />
+			Richieste Speciali:<br />
 			<textarea name="messaggio" rows="10" cols="30"></textarea> <br/>
 			<input type="button" value=" Invia " onClick="Email()" style="float: right;">
 			</form>
