@@ -11,10 +11,6 @@
 	var fullmessage = `${utente}, ${eta} anni, richiede preventivo per noleggio da ${da} a ${a}.\n\nRichieste speciali:\n${messaggio}`
     if ((da == "") || (da == "undefined") ||(a == "") || (a == "undefined") || (eta == "") || (eta == "undefined") || (utente == "") || (utente == "undefined")) {
 	alert("Valorizzare tutti i campi obbligatori.");
-	document.modulo.utente.focus();
-	document.modulo.da.focus();
-	document.modulo.a.focus();
-	document.modulo.eta.focus();
     
     } else {
     location.href = "mailto:" + email + "?Subject=" + oggetto + "&Body=" + fullmessage;
@@ -48,13 +44,13 @@
 			<input type="text" name="email"> <br /> -->
 			<!-- Oggetto:<br />
 			<input type="text" name="oggetto"> <br />  -->
-			Cognome e Nome:<br />
+			Cognome e Nome: *<br />
 			<input type="text" name="utente"> <br />
-			Età:<br />
+			Età: *<br />
 			<input type="text" name="eta"> <br />
-			Noleggio Da:<br />
+			Noleggio Da: *<br />
 			<input type="text" name="da"> <br />
-			A:<br />
+			A: *<br />
 			<input type="text" name="a"> <br />
 			Richieste Speciali:<br />
 			<textarea name="messaggio" rows="7" cols="30"></textarea> <br/>
